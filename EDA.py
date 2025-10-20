@@ -1,5 +1,4 @@
-# %% [code]
-
+#%%% [code]
 #Imports
 
 import tweetnlp
@@ -9,6 +8,23 @@ import pandas as pd
 from wordcloud import WordCloud
 from sklearn.feature_extraction.text import CountVectorizer
 from transformers import pipeline
+
+SEARCH_TERMS=['life of a showgirl',
+              'taylor swift',
+              'taylor',
+              'new album',
+              'album',
+              'actually romantic',
+              'fate of ophelia',
+              'opalite',
+              'wood',
+              'elizabeth taylor',
+              'eldest daughter',
+              'wish list',
+              'ruin the friendship',
+              'father figure',
+              'swiftie',
+              'cancelled']
 
 
 # Engagement EDA
@@ -175,22 +191,7 @@ def Irony_analysis(df):
     plt.title('Irony Distribution (TweetNLP)')
     plt.show()
 
-def Relevance_check(df):
-    model=pipeline('question-answering', model='distilbert-base-cased-distilled-squad')
-    questions=["is this tweet about taylor swift yes or no?",
-               "is this tweet about taylor swift's new album the life of a showgirl yes or no?",
-               "is this tweet about taylor swift's music yes or no?"]
-    def is_about_ts(text):
-        answers = []
-        for question in questions:
-            result = model(question=question, context=text)
-            answers.append(result['answer'].lower())
-        return answers
-    df['relevance'] = df['cleaned'].astype(str).apply(is_about_ts)
-    #plt.figure(figsize=(6,4))
-    #sns.countplot(x='relevance', data=df, order=df['relevance'].value_counts().index)
-    #plt.title('Relevance Distribution (TweetNLP)')
-    #plt.show()
+
 
     
 
@@ -198,30 +199,23 @@ def Relevance_check(df):
 # Full EDA Pipeline
 # =====================
 def full_eda_pipeline(df):
+    print("Starting EDA Pipeline...")
+    print("Entire Data Set...")
+    print("Engagement EDA...")
     engagement_eda(df)
+    print("Textual Analysis...")    
     textual_analysis(df)
+    print("TweetNLP Analyses...")
     sentiment_analysis(df)
     get_topic(df)
     emotion_analysis(df)
     NamedEntity_analysis(df)
     Irony_analysis(df)
-    Relevance_check(df)
-    #examples of relevant and irrelevant tweets
-    #df_relevant=df[df['relevance']=='Relevant']
-    #df_irrelevant=df[df['relevance']=='Irrelevant']
-    #df_relevant.to_csv('relevant_tweets.csv', index=False)
-    df.to_csv('tweets.csv', index=False)
-    #extract_themes(df)
-    #correlation_analysis(df)
-    #df.to_csv('tweets_with_sentiment_themes_labeled.csv', index=False)
-    #print('Analysis complete — exported tweets_with_sentiment_themes_labeled.csv')
+    
+    
 
-# %% [code]
+#%%% [code]
 DATASET_PATH='CSVs\dataset_cleaned.csv'
 dataset=pd.read_csv(DATASET_PATH)
 dataset=dataset.sample(frac=0.01, random_state=42).reset_index(drop=True)  # shuffle
 full_eda_pipeline(dataset)
-
-# %% [code]
-
-# %%
