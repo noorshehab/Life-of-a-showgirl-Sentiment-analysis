@@ -1,0 +1,217 @@
+{
+  "shared_medium_strong": [],
+  "only_in_pearson": [
+    {
+      "x": "retweet_count",
+      "y": "author/followers_count",
+      "r": 0.45
+    },
+    {
+      "x": "reply_count",
+      "y": "quote_count",
+      "r": 0.47
+    },
+    {
+      "x": "quote_count",
+      "y": "retweet_count",
+      "r": 0.51
+    },
+    {
+      "x": "retweet_count",
+      "y": "favorite_count",
+      "r": 0.77
+    },
+    {
+      "x": "retweet_count",
+      "y": "quote_count",
+      "r": 0.51
+    },
+    {
+      "x": "quote_count",
+      "y": "favorite_count",
+      "r": 0.38
+    },
+    {
+      "x": "reply_count",
+      "y": "author/followers_count",
+      "r": 0.45
+    },
+    {
+      "x": "reply_count",
+      "y": "favorite_count",
+      "r": 0.47
+    },
+    {
+      "x": "favorite_count",
+      "y": "reply_count",
+      "r": 0.47
+    },
+    {
+      "x": "favorite_count",
+      "y": "retweet_count",
+      "r": 0.77
+    },
+    {
+      "x": "author/followers_count",
+      "y": "reply_count",
+      "r": 0.45
+    },
+    {
+      "x": "reply_count",
+      "y": "retweet_count",
+      "r": 0.7
+    },
+    {
+      "x": "quote_count",
+      "y": "reply_count",
+      "r": 0.47
+    },
+    {
+      "x": "retweet_count",
+      "y": "reply_count",
+      "r": 0.7
+    },
+    {
+      "x": "author/followers_count",
+      "y": "retweet_count",
+      "r": 0.45
+    },
+    {
+      "x": "favorite_count",
+      "y": "quote_count",
+      "r": 0.38
+    }
+  ],
+  "only_in_spearman": [
+    {
+      "x": "reply_count",
+      "y": "author/followers_count",
+      "r": 0.45
+    },
+    {
+      "x": "favorite_count",
+      "y": "reply_count",
+      "r": 0.73
+    },
+    {
+      "x": "retweet_count",
+      "y": "quote_count",
+      "r": 0.76
+    },
+    {
+      "x": "author/followers_count",
+      "y": "retweet_count",
+      "r": 0.52
+    },
+    {
+      "x": "retweet_count",
+      "y": "reply_count",
+      "r": 0.69
+    },
+    {
+      "x": "author/followers_count",
+      "y": "author/friends_count",
+      "r": 0.52
+    },
+    {
+      "x": "author/followers_count",
+      "y": "reply_count",
+      "r": 0.45
+    },
+    {
+      "x": "favorite_count",
+      "y": "author/followers_count",
+      "r": 0.54
+    },
+    {
+      "x": "quote_count",
+      "y": "favorite_count",
+      "r": 0.72
+    },
+    {
+      "x": "author/followers_count",
+      "y": "quote_count",
+      "r": 0.42
+    },
+    {
+      "x": "retweet_count",
+      "y": "favorite_count",
+      "r": 0.87
+    },
+    {
+      "x": "quote_count",
+      "y": "author/followers_count",
+      "r": 0.42
+    },
+    {
+      "x": "favorite_count",
+      "y": "retweet_count",
+      "r": 0.87
+    },
+    {
+      "x": "author/friends_count",
+      "y": "author/followers_count",
+      "r": 0.52
+    },
+    {
+      "x": "author/statuses_count",
+      "y": "author/friends_count",
+      "r": 0.45
+    },
+    {
+      "x": "author/statuses_count",
+      "y": "author/followers_count",
+      "r": 0.56
+    },
+    {
+      "x": "reply_count",
+      "y": "retweet_count",
+      "r": 0.69
+    },
+    {
+      "x": "retweet_count",
+      "y": "author/followers_count",
+      "r": 0.52
+    },
+    {
+      "x": "reply_count",
+      "y": "favorite_count",
+      "r": 0.73
+    },
+    {
+      "x": "author/followers_count",
+      "y": "author/statuses_count",
+      "r": 0.56
+    },
+    {
+      "x": "reply_count",
+      "y": "quote_count",
+      "r": 0.67
+    },
+    {
+      "x": "favorite_count",
+      "y": "quote_count",
+      "r": 0.72
+    },
+    {
+      "x": "quote_count",
+      "y": "retweet_count",
+      "r": 0.76
+    },
+    {
+      "x": "author/friends_count",
+      "y": "author/statuses_count",
+      "r": 0.45
+    },
+    {
+      "x": "author/followers_count",
+      "y": "favorite_count",
+      "r": 0.54
+    },
+    {
+      "x": "quote_count",
+      "y": "reply_count",
+      "r": 0.67
+    }
+  ]
+}

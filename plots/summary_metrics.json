@@ -1,0 +1,19 @@
+{
+  "how_many_tweets": 17565,
+  "how_many_accounts": 11347,
+  "average_tweets_by_author": 1.5479862518727416,
+  "how_many_quotes": 1756,
+  "how_many_replies": 2677,
+  "how_many_conversations": 14466,
+  "length_of_conversations": 2.0420723028750354,
+  "average_retweets": 170.6304582977512,
+  "average_replies": 16.488129803586677,
+  "average_quotes": 21.049587247366922,
+  "average_likes": 1931.5556504412184,
+  "internal_replies": 15309,
+  "external_replies": -12632,
+  "internal_quotes": 352,
+  "external_quotes": 1404,
+  "how_many_tweets_in_same_conversation": 3731,
+  "total_volume_of_retweets": 2997124
+}

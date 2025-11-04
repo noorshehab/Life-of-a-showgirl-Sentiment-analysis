@@ -1,0 +1,60 @@
+Used apify x scrapper api to get around 17.5 thousand tweets corresponding to relevant search terms  cleaned the data and got rid of many attributes from the api
+as they werent of interest 
+
+So, what is of interest?
+
+**The idea is to see what the difference between stan and non stan discussion is.** 
+
+How do I do that?
+
+The Accounts
+stans easily identify themselves for the most part with insider lingo a given fandom will have a lexicon
+even if someone doesnt identify their account as belonging to a standom if they like something artist or media they will use fan lingo
+using simple text mining its easy to find this fan lingo we can create a naive classifier for low cost that simply scores an account based on its details as either swiftie or not the nature of standom and its easy identifiers means this is a task that doesnt need semantic text understanding if a person says theyre a swiftie 
+what more do you need.
+
+The Tweets
+This same kind of associated text mining can be applied to the tweets themselves to find out the "lexicon" used to discuss certain topics classification relevance can also be done this way
+with a score given for the presence of relevant associated keywords. why this could work is because there are some terms that if present i know immedietly a tweet is relevant
+but tweets are short form text users rely on euphemism and indirect reference to fit their ideas into the character limit so a vocabulary exists even without the big obvius key word the
+vocabulary will be used so this works as a naive approach
+
+The Engagement
+we can make a basic assumption that tweets with high retweets and likes are agreed with the sentiment is shared without addition or disagreement 
+another basic assumption is that quotes tend to disagree with the original tweet atleast this is my experience so highly quoted tweets are probably disagreed with
+replies could go either way if a user replies to a tweet they dont 100 percent share its sentiment they have something to say the reason why high replies arent definitively
+disagreement is because replies to the replies disagreeing with the original post could be defending its view point or poster replies are kind of a split that way
+tweets a conversation which is just a reply thread will fall under one topic so if something is easy to label with our scheme the other tweets will probably fall under the same 
+topic
+
+
+What was in the data?
+It turned out none of the tweets in the entire data set were replies to each other they shared conversations but no tweet was a direct reply to another tweet that was in the data set the same goes for quotes
+None of the tweets are retweets these are all original tweets by the author so theyre expressed sentiments and we can look at how much other people agree with them using the engagement metrics
+the top 20 percent of tweeters contributed 
+
+Whats next ?
+Clustering could be one thing but results were pretty bad in the dummy run using hdbscan so look into clustering text practically maybe for each search term instead of the whole set
+Similarity measures can tell you if two statements are in agreement outside of engagement metrics what if we could take a popular tweet and see how many other tweets are stating similar opinions
+this could trace the spread of opinions among fans it also works for non fans
+to find out if people are disagreeing within a conversation can we do similarity comparison between embeddings of tweets and if a certain proportion of the conversation is dissimilar theyre arguing
+
+
+To Do List
+% Save summary metrics to a txt file and explain them 
+% Summarize the correlations for record keeping 
+    %Whats in the scatter plots
+        % save the plots to a file 
+% Find prolific Accounts
+% Find the volume of tweets in the data set made by prolific Accounts
+%Classify accounts as swiftie or not
+        X Connection graph between words in descriptions
+        X Find cities other artists and non swift related things that co occur with being a swiftie
+X Are swifties prolific tweeters what volume of the dataset did they produce
+% Classify relevance
+X For each search term run the keyword extractor to find out whats being said 
+
+
+
+
+

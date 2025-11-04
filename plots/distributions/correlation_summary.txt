@@ -1,0 +1,3 @@
+Shared medium/strong correlations (Pearson & Spearman):
+
+Only in Pearson (not in Spearman):
